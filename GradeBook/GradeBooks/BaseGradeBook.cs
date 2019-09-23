@@ -112,9 +112,9 @@ namespace GradeBook.GradeBooks
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
             var weighting = 0;
-            if (IsWeighted && studentType.Equals("Honors"))
+            if (IsWeighted && (studentType == StudentType.Honors))
                 weighting = 1;
-            else if (IsWeighted && studentType.Equals("DualEnrolled"))
+            else if (IsWeighted && (studentType == StudentType.DualEnrolled))
                 weighting = 1;
 
 
